@@ -4,7 +4,7 @@ Project developed from scratch with the purpose of fixating javascript concepts 
 
 The app main functionality is a stopwatch with two buttons and 4 actions available: Start, Stop, Resume and Reset.
 
-With users prone to motion sickness in mind, the animations don't show if they have motion reduced setting on.
+With users prone to motion sickness in mind, the animations (which includes milliseconds display due to its fast nature) don't show if they have motion reduced setting on.
 
 <h2>Initial Design</h2>
 
