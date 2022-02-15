@@ -7,7 +7,10 @@ const daysDisplay = document.getElementById("days");
 const hoursDisplay = document.getElementById("hours");
 const minutesDisplay = document.getElementById("minutes");
 const secondsDisplay = document.getElementById("seconds");
-const millisecondsDisplay = document.getElementById("milliseconds");
+const millisecondsDisplay = document.querySelector(".milliseconds");
+const reducedMotion =
+  window.matchMedia("(prefers-reduced-motion)").matches ||
+  window.matchMedia("(prefers-reduced-motion: reduced)").matches;
 
 let days = 0;
 let hours = 0;
@@ -45,9 +48,9 @@ function updateWatch() {
   }`;
   hoursDisplay.innerText = `${hours < 10 ? `0${hours}:` : `${hours}:`}`;
   minutesDisplay.innerText = `${minutes < 10 ? `0${minutes}:` : `${minutes}:`}`;
-  secondsDisplay.innerText = `${seconds < 10 ? `0${seconds}:` : `${seconds}:`}`;
+  secondsDisplay.innerText = `${seconds < 10 ? `0${seconds}` : `${seconds}`}`;
   millisecondsDisplay.innerText = `${
-    mseconds < 100 ? `0${mseconds / 10}` : `${mseconds / 10}`
+    mseconds < 100 ? `:0${mseconds / 10}` : `:${mseconds / 10}`
   }`;
   updateDescription();
 }
@@ -55,8 +58,10 @@ function updateWatch() {
 function updateDescription() {
   watchDescription.innerText =
     days > 0
-      ? "Days : Hours : Minutes : Seconds : Milliseconds"
-      : "Hours : Minutes : Seconds : Milliseconds";
+      ? `Days : Hours : Minutes : Seconds ${
+          reducedMotion ? " " : ": Milliseconds"
+        }`
+      : `Hours : Minutes : Seconds ${reducedMotion ? " " : ": Milliseconds"}`;
 }
 
 function startWatch() {
