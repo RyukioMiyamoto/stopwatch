@@ -78,3 +78,18 @@ button:active {
     padding: 15px 30px;
   }
 }
+
+@media (min-width: 850px) {
+  #watch {
+    padding: 0;
+  }
+
+  button {
+    cursor: pointer;
+    transition: filter 0.175s ease-in-out;
+  }
+
+  button:hover {
+    filter: brightness(1.25);
+  }
+}
