@@ -12,9 +12,30 @@
       rel="stylesheet"
     />
     <script src="./script.js" defer></script>
+    <noscript>
+      <style>
+        #watch-container {
+          display: none;
+        }
+
+        body {
+          background-color: var(--noscript);
+        }
+
+        #no-script {
+          display: block;
+          font-family: "Major Mono Display", monospace;
+          font-size: 1.25rem;
+          text-align: center;
+          color: #fff;
+          transform: translateY(350%);
+        }
+      </style>
+    </noscript>
     <title>Stopwatch - Vanilla Javascript</title>
   </head>
   <body>
+    <div id="no-script">Sorry, your browser does not support JavaScript!</div>
     <main id="watch-container">
       <h1 id="watch">00:00:00:00</h1>
       <small id="watch-description">Hours:Minutes:Seconds:Milliseconds</small>

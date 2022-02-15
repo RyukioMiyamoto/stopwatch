@@ -2,12 +2,17 @@
   --background: #474855;
   --watch: #aeaeaf;
   --details: #292536;
+  --noscript: #c41616;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#no-script {
+  display: none;
 }
 
 body {
@@ -26,7 +31,7 @@ body {
 }
 
 #watch {
-  font-family: "Major Mono Display";
+  font-family: "Major Mono Display", monospace;
   font-size: 2.25rem;
   padding: 0 30px;
 }
