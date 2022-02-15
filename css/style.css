@@ -1,4 +1,6 @@
-:root {
+@import "./animations.css";
+
+:root  {
   --background: #474855;
   --watch: #aeaeaf;
   --details: #292536;
@@ -32,6 +34,7 @@ body {
 }
 
 #watch {
+  display: flex;
   font-family: "Major Mono Display", monospace;
   font-size: 2.25rem;
   padding: 0 30px;

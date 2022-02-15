@@ -8,12 +8,9 @@
       name="description"
       content="A stopwatch made with vanilla Javascript."
     />
-    <meta
-      property="og:url"
-      content="https://stopwatch-yukio.netlify.app"
-    />
+    <meta property="og:url" content="https://stopwatch-yukio.netlify.app" />
     <meta property="og:image" content="./img/og.png" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,8 +44,19 @@
   <body>
     <div id="no-script">Sorry, your browser does not support JavaScript!</div>
     <main id="watch-container">
-      <h1 id="watch">00:00:00:00</h1>
-      <small id="watch-description">Hours:Minutes:Seconds:Milliseconds</small>
+      <h1 id="watch">
+        <p id="days"></p>
+        <p id="hours">00:</p>
+
+        <p id="minutes">00:</p>
+
+        <p id="seconds">00:</p>
+
+        <p id="milliseconds">00</p>
+      </h1>
+      <small id="watch-description"
+        >Hours : Minutes : Seconds : Milliseconds</small
+      >
       <div id="buttons-container">
         <button id="start">START</button>
         <button id="reset">RESET</button>

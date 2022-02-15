@@ -3,6 +3,12 @@ const watchDescription = document.getElementById("watch-description");
 const buttons = document.getElementById("buttons-container");
 const startBTN = document.getElementById("start");
 
+const daysDisplay = document.getElementById("days");
+const hoursDisplay = document.getElementById("hours");
+const minutesDisplay = document.getElementById("minutes");
+const secondsDisplay = document.getElementById("seconds");
+const millisecondsDisplay = document.getElementById("milliseconds");
+
 let days = 0;
 let hours = 0;
 let minutes = 0;
@@ -34,11 +40,13 @@ function incrementMS() {
 }
 
 function updateWatch() {
-  watch.innerText = `${
+  daysDisplay.innerText = `${
     days > 0 ? `${days < 10 ? `0${days}:` : `${days}:`}` : ""
-  }${hours < 10 ? `0${hours}` : `${hours}`}:${
-    minutes < 10 ? `0${minutes}` : `${minutes}`
-  }:${seconds < 10 ? `0${seconds}` : `${seconds}`}:${
+  }`;
+  hoursDisplay.innerText = `${hours < 10 ? `0${hours}:` : `${hours}:`}`;
+  minutesDisplay.innerText = `${minutes < 10 ? `0${minutes}:` : `${minutes}:`}`;
+  secondsDisplay.innerText = `${seconds < 10 ? `0${seconds}:` : `${seconds}:`}`;
+  millisecondsDisplay.innerText = `${
     mseconds < 100 ? `0${mseconds / 10}` : `${mseconds / 10}`
   }`;
   updateDescription();
@@ -47,8 +55,8 @@ function updateWatch() {
 function updateDescription() {
   watchDescription.innerText =
     days > 0
-      ? "Days:Hours:Minutes:Seconds:Milliseconds"
-      : "Hours:Minutes:Seconds:Milliseconds";
+      ? "Days : Hours : Minutes : Seconds : Milliseconds"
+      : "Hours : Minutes : Seconds : Milliseconds";
 }
 
 function startWatch() {
