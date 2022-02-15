@@ -1,0 +1,63 @@
+:root {
+  --background: #474855;
+  --watch: #aeaeaf;
+  --details: #292536;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: var(--background);
+}
+
+#watch-container {
+  display: grid;
+  max-width: 100%;
+  justify-items: center;
+  row-gap: 15px;
+  margin: 250px auto;
+  text-align: center;
+  font-weight: 700;
+  color: var(--watch);
+}
+
+#watch {
+  font-family: "Major Mono Display";
+  font-size: 2.25rem;
+  padding: 0 30px;
+}
+
+#watch-description {
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+}
+
+#buttons-container {
+  display: flex;
+  column-gap: 30px;
+}
+
+button {
+  min-width: 120px;
+  height: 40px;
+  padding: 10px 20px;
+  background-color: var(--watch);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--details);
+
+  border: none;
+  border-radius: 10px;
+}
+
+button:active {
+  transform: scale(0.96);
+}
