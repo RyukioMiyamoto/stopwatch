@@ -3,6 +3,7 @@
   --watch: #aeaeaf;
   --details: #292536;
   --noscript: #c41616;
+  color: #103c64;
 }
 
 * {
@@ -60,6 +61,7 @@ button {
 
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 button:active {
@@ -90,7 +92,6 @@ button:active {
   }
 
   button {
-    cursor: pointer;
     transition: filter 0.175s ease-in-out;
   }
 
