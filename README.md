@@ -1,8 +1,7 @@
 <h1> Overview </h1>
 
 Project developed from scratch with the purpose of fixating javascript concepts like DOM manipulation, event bubbling and built-in methods.
-
-The app main functionality is a stopwatch with two buttons and 4 actions available: Start, Stop, Resume and Reset.
+The app main functionality is a stopwatch with two buttons and 4 actions available: Start, Pause, Resume and Reset.
 
 With users prone to motion sickness in mind, the animations (which includes milliseconds display due to its fast nature) don't show if they have motion reduced setting on.
 
@@ -18,7 +17,9 @@ Although the design screenshots display the number of days passed, it will only 
 <img src="https://github.com/RyukioMiyamoto/stopwatch/blob/main/img/style.png?raw=true" alt="">
 
 <h3>Issues</h3>
-I noticed that whenever the application was out of focus (tab changes) the watch would stop, so I looked into it and found out the setInterval method wasn't very reliable for this kind of operation, however I wanted to try and find a fix for it and tried until I've reached the present solution, using the Date methods, calculating the difference in time from when the visibility changed and adding to the total time. There's room for improvement but as it is, I feel satisfied for reaching a working solution.
+I noticed that whenever the application was out of focus (tab changes) the watch would stop, so I looked into it and found out the setInterval method wasn't very reliable for this kind of operation.However, I wanted to try and find a fix for it, so, after some experimenting, I've reached the present solution, using the Date methods, calculating the difference in time from when the visibility changed and adding to the total time. 
+
+There's plenty of room for improvement but as it is, I felt satisfied for reaching a working solution.
 
 <h2>Demo</h2>
 
