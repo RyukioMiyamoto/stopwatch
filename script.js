@@ -136,7 +136,7 @@ function handleClick({ target }) {
 buttons.addEventListener("click", handleClick);
 
 window.addEventListener("visibilitychange", () => {
-  if (!isOutOfFocus && !isPaused && document.visibilityState === "hidden") {
+  if (!isOutOfFocus && !isPaused && document.visibilityState === "hidden" && mseconds > 0) {
     startTime = new Date();
     startMs = +startTime.getMilliseconds();
     startSeconds = +startTime.getSeconds();
@@ -149,7 +149,12 @@ window.addEventListener("visibilitychange", () => {
 });
 
 window.addEventListener("visibilitychange", () => {
-  if (isOutOfFocus && isPaused && document.visibilityState !== "hidden") {
+  if (
+    isOutOfFocus &&
+    isPaused &&
+    document.visibilityState !== "hidden" &&
+    mseconds > 0
+  ) {
     nowTime = new Date();
     nowMs = +nowTime.getMilliseconds();
     nowSeconds = +nowTime.getSeconds();
